@@ -17,14 +17,182 @@
                 height: 100%;
                 touch-action: none;
             }
+			
+			.modal {
+			  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+			}
+
+			.modal__overlay {
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background: rgba(0,0,0,0.6);
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			}
+
+			.modal__container {
+			  background-color: #fff;
+			  padding: 30px;
+			  max-width: 500px;
+			  max-height: 100vh;
+			  border-radius: 4px;
+			  overflow-y: auto;
+			  box-sizing: border-box;
+			}
+
+			.modal__header {
+			  display: flex;
+			  justify-content: space-between;
+			  align-items: center;
+			}
+
+			.modal__title {
+			  margin-top: 0;
+			  margin-bottom: 0;
+			  font-weight: 600;
+			  font-size: 1.25rem;
+			  line-height: 1.25;
+			  color: #00449e;
+			  box-sizing: border-box;
+			}
+
+			.modal__close {
+			  background: transparent;
+			  border: 0;
+			}
+
+			.modal__header .modal__close:before { content: "\2715"; }
+
+			.modal__content {
+			  margin-top: 2rem;
+			  margin-bottom: 2rem;
+			  line-height: 1.5;
+			  color: rgba(0,0,0,.8);
+			}
+
+			.modal__btn {
+			  font-size: .875rem;
+			  padding-left: 1rem;
+			  padding-right: 1rem;
+			  padding-top: .5rem;
+			  padding-bottom: .5rem;
+			  background-color: #e6e6e6;
+			  color: rgba(0,0,0,.8);
+			  border-radius: .25rem;
+			  border-style: none;
+			  border-width: 0;
+			  cursor: pointer;
+			  -webkit-appearance: button;
+			  text-transform: none;
+			  overflow: visible;
+			  line-height: 1.15;
+			  margin: 0;
+			  will-change: transform;
+			  -moz-osx-font-smoothing: grayscale;
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
+			  -webkit-transform: translateZ(0);
+			  transform: translateZ(0);
+			  transition: -webkit-transform .25s ease-out;
+			  transition: transform .25s ease-out;
+			  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+			}
+
+			.modal__btn:focus, .modal__btn:hover {
+			  -webkit-transform: scale(1.05);
+			  transform: scale(1.05);
+			}
+
+			.modal__btn-primary {
+			  background-color: #00449e;
+			  color: #fff;
+			}
+			
+			@keyframes mmfadeIn {
+				from { opacity: 0; }
+				  to { opacity: 1; }
+			}
+
+			@keyframes mmfadeOut {
+				from { opacity: 1; }
+				  to { opacity: 0; }
+			}
+
+			@keyframes mmslideIn {
+			  from { transform: translateY(15%); }
+				to { transform: translateY(0); }
+			}
+
+			@keyframes mmslideOut {
+				from { transform: translateY(0); }
+				to { transform: translateY(-10%); }
+			}
+
+			.micromodal-slide {
+			  display: none;
+			}
+
+			.micromodal-slide.is-open {
+			  display: block;
+			}
+
+			.micromodal-slide[aria-hidden="false"] .modal__overlay {
+			  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+			}
+
+			.micromodal-slide[aria-hidden="false"] .modal__container {
+			  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+			}
+
+			.micromodal-slide[aria-hidden="true"] .modal__overlay {
+			  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+			}
+
+			.micromodal-slide[aria-hidden="true"] .modal__container {
+			  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+			}
+
+			.micromodal-slide .modal__container,
+			.micromodal-slide .modal__overlay {
+			  will-change: transform;
+			}
         </style>
         <script src="https://cdn.babylonjs.com/babylon.js"></script>
         <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-        <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+		<script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
         <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+		<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     </head>
    <body>
+   <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Post Scriptum Armour Viewer v0.6
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>
+            This is a viewer of the collision armor model and internal components of Post Scriptum.<br>
+			Please note that the models are from the 4.16 version, but I don't believe anything has changed.<br>
+			Everything shown is a very close approximation, maybe when the SDK drops I can show more accurate info.<br>
+			If you run into any bugs, feel free to report them on <a href="https://github.com/dasu/PS_Armor_viewer">github</a>.
+          </p>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+  </div>
    <a href="https://github.com/dasu/PS_Armor_Viewer"><img src="git.png" style="position:absolute;bottom:0;left:0;width:2%"></a>
+   <button onclick="MicroModal.show('modal-1')" style="position:absolute;bottom:0px;left:50px;">About</button>
 	<select id="dd" autocomplete="off" style="position:absolute;">
 	  <optgroup label="Axis">
 	    <option value="Jagdpanzer_IV">Jagdpanzer IV</option>
@@ -94,6 +262,8 @@
 				advancedTexture.addControl(stackOutside);
 				advancedTexture.addControl(stackInternalPanel);
 				var armourindex = []
+				var armourstack = {}
+				var crewstack = {}
 				checkbox = checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
 					if (value) {
 						scene.meshes.forEach(function(mesh) {
@@ -133,55 +303,65 @@
 							if (armourindex.indexOf(mesh.material.name) > -1) {
 								return;
 							}
-							var button = BABYLON.GUI.Button.CreateSimpleButton(mesh.material.name, mesh.material.name);
+							crewstack[mesh.material.name] = mesh.material.albedoColor.toHexString();
 							armourindex.push(mesh.material.name);
-							button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
-							button.width = 0.2;
-							button.height = "30px";
-							button.color = "#000000";
-							button.background = mesh.material.albedoColor.toHexString();
-							button.onPointerClickObservable.add(function(e, t) {
-								if (t.target.name == lastclicked) {
-									meshes.forEach(function(mesh) {
-										if (!mesh.material) {
-											return;
-										}
-										mesh.material.transparencyMode = 0
-										mesh.material.alpha = 1;
-									});
-									lastclicked = null;
-									return;
-								} else {
-									scene.meshes.forEach(function(mesh) {
-										if (!mesh.material) {
-											return;
-										}
-										if (mesh.material.name == t.target.name) {
-											mesh.material.transparencyMode = 0
-											mesh.material.alpha = 1;
-										} else {
-											mesh.material.transparencyMode = 2
-											mesh.material.alpha = 0.15;
-										}
-									});
-								}
-								lastclicked = t.target.name;
-								checkbox.children[0].isChecked = false;
-							});
-							stackInternalPanel.addControl(button);
 						}
 						return;
 					}
 					if (armourindex.indexOf(mesh.material.name) > -1) {
 						return;
 					}
-					var button = BABYLON.GUI.Button.CreateSimpleButton(mesh.material.name, mesh.material.name);
+					armourstack[mesh.material.name.split("MI_PS_Armor_")[1]] = mesh.material.albedoColor.toHexString();
 					armourindex.push(mesh.material.name);
+				})
+				for (const [ key, value ] of Object.entries(armourstack)){
+					var button = BABYLON.GUI.Button.CreateSimpleButton("MI_PS_Armor_"+key, "MI_PS_Armor_"+key);
+					//armourindex.push("MI_PS_Armor_"+key);
 					button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
 					button.width = 0.2;
 					button.height = "30px";
 					button.color = "#000000";
-					button.background = mesh.material.albedoColor.toHexString();
+					button.background = value;
+					button.onPointerClickObservable.add(function(e, t) {
+						if (t.target.name == lastclicked) {
+							meshes.forEach(function(mesh) {
+								if (!mesh.material) {
+									return;
+								}
+								mesh.material.transparencyMode = 0
+								mesh.material.alpha = 1;
+							});
+							lastclicked = null;
+							return;
+						} else {
+							scene.meshes.forEach(function(mesh) {
+								if (!mesh.material) {
+									return;
+								}
+								if (mesh.material.name == t.target.name) {
+									mesh.material.transparencyMode = 0
+									mesh.material.alpha = 1;
+								} else {
+									mesh.material.transparencyMode = 2
+									mesh.material.alpha = 0.15;
+								}
+							});
+						}
+						lastclicked = t.target.name;
+						checkbox.children[0].isChecked = false;
+					}); 
+					stackPanel.addControl(button);
+				}
+				const sort = (crewstack) => Object.keys(crewstack).sort().reduce((acc,c)=> { acc[c] = crewstack[c]; return acc}, {})
+				crewstack = sort(crewstack)
+				for (const [ key, value ] of Object.entries(crewstack)){
+					var button = BABYLON.GUI.Button.CreateSimpleButton(key, key);
+					//armourindex.push(key);
+					button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+					button.width = 0.2;
+					button.height = "30px";
+					button.color = "#000000";
+					button.background = value;
 					button.onPointerClickObservable.add(function(e, t) {
 						if (t.target.name == lastclicked) {
 							meshes.forEach(function(mesh) {
@@ -210,8 +390,8 @@
 						lastclicked = t.target.name;
 						checkbox.children[0].isChecked = false;
 					});
-					stackPanel.addControl(button);
-				})
+					stackInternalPanel.addControl(button);	
+				}
 				var armourindex = [];
 			});
 
@@ -251,6 +431,8 @@
 				advancedTexture.addControl(stackOutside);
 				advancedTexture.addControl(stackInternalPanel);
 				var armourindex = [];
+				var armourstack = {};
+				var crewstack = {};
 				checkbox = checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
 					if (value) {
 						scene.meshes.forEach(function(mesh) {
@@ -291,55 +473,65 @@
 							if (armourindex.indexOf(mesh.material.name) > -1) {
 								return;
 							}
-							var button = BABYLON.GUI.Button.CreateSimpleButton(mesh.material.name, mesh.material.name);
+							crewstack[mesh.material.name] = mesh.material.albedoColor.toHexString();
 							armourindex.push(mesh.material.name);
-							button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
-							button.width = 0.2;
-							button.height = "30px";
-							button.color = "#000000";
-							button.background = mesh.material.albedoColor.toHexString();
-							button.onPointerClickObservable.add(function(e, t) {
-								if (t.target.name == lastclicked) {
-									meshes.forEach(function(mesh) {
-										if (!mesh.material) {
-											return;
-										}
-										mesh.material.transparencyMode = 0
-										mesh.material.alpha = 1;
-									});
-									lastclicked = null;
-									return;
-								} else {
-									scene.meshes.forEach(function(mesh) {
-										if (!mesh.material) {
-											return;
-										}
-										if (mesh.material.name == t.target.name) {
-											mesh.material.transparencyMode = 0
-											mesh.material.alpha = 1;
-										} else {
-											mesh.material.transparencyMode = 2
-											mesh.material.alpha = 0.15;
-										}
-									});
-								}
-								lastclicked = t.target.name;
-								checkbox.children[0].isChecked = false;
-							});
-							stackInternalPanel.addControl(button);
 						}
 						return;
 					}
 					if (armourindex.indexOf(mesh.material.name) > -1) {
 						return;
 					}
-					var button = BABYLON.GUI.Button.CreateSimpleButton(mesh.material.name, mesh.material.name);
+					armourstack[mesh.material.name.split("MI_PS_Armor_")[1]] = mesh.material.albedoColor.toHexString();
 					armourindex.push(mesh.material.name);
-					button.width = 0.2;
+				})
+				for (const [ key, value ] of Object.entries(armourstack)){
+					var button = BABYLON.GUI.Button.CreateSimpleButton("MI_PS_Armor_"+key, "MI_PS_Armor_"+key);
+					//armourindex.push("MI_PS_Armor_"+key);
 					button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+					button.width = 0.2;
 					button.height = "30px";
 					button.color = "#000000";
-					button.background = mesh.material.albedoColor.toHexString();
+					button.background = value;
+					button.onPointerClickObservable.add(function(e, t) {
+						if (t.target.name == lastclicked) {
+							meshes.forEach(function(mesh) {
+								if (!mesh.material) {
+									return;
+								}
+								mesh.material.transparencyMode = 0
+								mesh.material.alpha = 1;
+							});
+							lastclicked = null;
+							return;
+						} else {
+							scene.meshes.forEach(function(mesh) {
+								if (!mesh.material) {
+									return;
+								}
+								if (mesh.material.name == t.target.name) {
+									mesh.material.transparencyMode = 0
+									mesh.material.alpha = 1;
+								} else {
+									mesh.material.transparencyMode = 2
+									mesh.material.alpha = 0.15;
+								}
+							});
+						}
+						lastclicked = t.target.name;
+						checkbox.children[0].isChecked = false;
+					}); 
+					stackPanel.addControl(button);
+				}
+				const sort = (crewstack) => Object.keys(crewstack).sort().reduce((acc,c)=> { acc[c] = crewstack[c]; return acc}, {})
+				crewstack = sort(crewstack)
+				for (const [ key, value ] of Object.entries(crewstack)){
+					var button = BABYLON.GUI.Button.CreateSimpleButton(key, key);
+					//armourindex.push(key);
+					button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+					button.width = 0.2;
+					button.height = "30px";
+					button.color = "#000000";
+					button.background = value;
 					button.onPointerClickObservable.add(function(e, t) {
 						if (t.target.name == lastclicked) {
 							meshes.forEach(function(mesh) {
@@ -368,8 +560,8 @@
 						lastclicked = t.target.name;
 						checkbox.children[0].isChecked = false;
 					});
-					stackPanel.addControl(button);
-				})
+					stackInternalPanel.addControl(button);	
+				}
 				var armourindex = [];
 			})
 		});
