@@ -2,6 +2,34 @@ import bpy
 import os
 import glob
 
+#24 armors/color steps
+mmColor = {
+    '5': (0.09758734714186246, 0.0015176349177441874, 0.14412847085805777, 1),
+    '10': (0.06124605423161761, 0.001821161901293025, 0.1589608350608804, 1),
+    '15': (0.03189603307301153, 0.001821161901293025, 0.17464740365558504, 1),
+    '20': (0.010960094006488246, 0.001821161901293025, 0.1946178304415758, 1),
+    '25': (0.0015176349177441874, 0.0024282158683907, 0.21223075741405523, 1),
+    '30': (0.0015176349177441874, 0.016807375752887384, 0.23074004852434915, 1),
+    '35': (0.0015176349177441874, 0.05126945837404324, 0.25415209433082675, 1),
+    '40': (0.0015176349177441874, 0.11443537382697373, 0.27467731206038465, 1),
+    '45': (0.0015176349177441874, 0.2195261997292692, 0.2961382707983211, 1),
+    '50': (0.0015176349177441874, 0.32314320911295075, 0.27467731206038465, 1),
+    '55': (0.0015176349177441874, 0.3467040563550296, 0.1714411007328226, 1),
+    '60': (0.00121410793419535, 0.3712376804741491, 0.09084171118340768, 1),
+    '65': (0.00121410793419535, 0.4019777798321958, 0.03560131487502034, 1),
+    '70': (0.00121410793419535, 0.4286904966139066, 0.006512090792594475, 1),
+    '75': (0.010329823029626936, 0.45641102318040466, 0.00121410793419535, 1),
+    '80': (0.05126945837404324, 0.4910208498478356, 0.0009105809506465125, 1),
+    '90': (0.14126329114027164, 0.5209955732043543, 0.0009105809506465125, 1),
+    '95': (0.3005437944157765, 0.5520114015120001, 0.000607053967097675, 1),
+    '100': (0.5457244613701866, 0.5906188409193369, 0.000607053967097675, 1),
+    '110': (0.6239603916750761, 0.4072402119017367, 0.000607053967097675, 1),
+    '120': (0.6583748172794485, 0.22696587351009836, 0.0003035269835488375, 1),
+    '140': (0.7011018919329731, 0.09758734714186246, 0.0003035269835488375, 1),
+    '145': (0.7379104087727308, 0.024157632448504756, 0.0, 1),
+    '150': (0.7835377915261935, 0.0, 0.0009105809506465125, 1)
+}
+
 d = "C:\\Users\\dasu\\Desktop\\toclean\\"
 sd = "C:\\Users\\dasu\\Desktop\\cleaned\\"
 os.chdir(d)
@@ -62,69 +90,78 @@ for f in glob.glob("*.glb"):
                 m.diffuse_color = (1,0.0998986,0.879623,1)
                 m.name = 'Engine'
             #armour MM
+            elif m.name == 'MI_PS_Armor_5':
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['5']
+                m.diffuse_color = mmColor['5']
             elif m.name == 'MI_PS_Armor_10':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.006048833022857054, 0.13286832155381798, 0.7605245046752924, 1)
-                m.diffuse_color = (0.006048833022857054, 0.13286832155381798, 0.7605245046752924, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['10']
+                m.diffuse_color = mmColor['10']
             elif m.name == 'MI_PS_Armor_15':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.006048833022857054, 0.32314320911295075, 0.7605245046752924, 1)
-                m.diffuse_color = (0.006048833022857054, 0.32314320911295075, 0.7605245046752924, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['15']
+                m.diffuse_color = mmColor['15']
             elif m.name == 'MI_PS_Armor_20':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.006512090792594475, 0.6239603916750761, 0.768151147247507, 1)
-                m.diffuse_color = (0.006512090792594475, 0.6239603916750761, 0.768151147247507, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['20']
+                m.diffuse_color = mmColor['20']
             elif m.name == 'MI_PS_Armor_25':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.006512090792594475, 0.7758222183174236, 0.5520114015120001, 1)
-                m.diffuse_color = (0.006512090792594475, 0.7758222183174236, 0.5520114015120001, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['25']
+                m.diffuse_color = mmColor['25']
             elif m.name == 'MI_PS_Armor_30':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.006995410187265387, 0.7758222183174236, 0.2788942634768104, 1)
-                m.diffuse_color = (0.006995410187265387, 0.7758222183174236, 0.2788942634768104, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['30']
+                m.diffuse_color = mmColor['30']
+            elif m.name == 'MI_PS_Armor_35':
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['35']
+                m.diffuse_color = mmColor['35']
             elif m.name == 'MI_PS_Armor_40':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.006995410187265387, 0.7835377915261935, 0.10702310297826761, 1)
-                m.diffuse_color = (0.006995410187265387, 0.7835377915261935, 0.10702310297826761, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['40']
+                m.diffuse_color = mmColor['40']
             elif m.name == 'MI_PS_Armor_45':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.007499032043226175, 0.7912979403326302, 0.02217388479338738, 1)
-                m.diffuse_color = (0.007499032043226175, 0.7912979403326302, 0.02217388479338738, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['45']
+                m.diffuse_color = mmColor['45']
             elif m.name == 'MI_PS_Armor_50':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.03560131487502034, 0.7912979403326302, 0.007499032043226175, 1)
-                m.diffuse_color = (0.03560131487502034, 0.7912979403326302, 0.007499032043226175, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['50']
+                m.diffuse_color = mmColor['50']
             elif m.name == 'MI_PS_Armor_55':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.14412847085805777, 0.799102738014409, 0.008023192985384994, 1)
-                m.diffuse_color = (0.14412847085805777, 0.799102738014409, 0.008023192985384994, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['55']
+                m.diffuse_color = mmColor['55']
             elif m.name == 'MI_PS_Armor_60':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.3467040563550296, 0.8069522576692516, 0.008023192985384994, 1)
-                m.diffuse_color = (0.3467040563550296, 0.8069522576692516, 0.008023192985384994, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['60']
+                m.diffuse_color = mmColor['60']
             elif m.name == 'MI_PS_Armor_65':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.6583748172794485, 0.8148465722161012, 0.008568125618069307, 1)
-                m.diffuse_color = (0.6583748172794485, 0.8148465722161012, 0.008568125618069307, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['65']
+                m.diffuse_color = mmColor['65']
             elif m.name == 'MI_PS_Armor_70':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.8148465722161012, 0.5840784178911641, 0.008568125618069307, 1)
-                m.diffuse_color = (0.8148465722161012, 0.5840784178911641, 0.008568125618069307, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['70']
+                m.diffuse_color = mmColor['70']
             elif m.name == 'MI_PS_Armor_75':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.8227857543962835, 0.3005437944157765, 0.009134058702220787, 1)
-                m.diffuse_color = (0.8227857543962835, 0.3005437944157765, 0.009134058702220787, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['75']
+                m.diffuse_color = mmColor['75']
             elif m.name == 'MI_PS_Armor_80':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.8307698767746546, 0.11953842798834562, 0.00972121732023785, 1)
-                m.diffuse_color = (0.8307698767746546, 0.11953842798834562, 0.00972121732023785, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['80']
+                m.diffuse_color = mmColor['80']
             elif m.name == 'MI_PS_Armor_90':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.8307698767746546, 0.026241221894849898, 0.00972121732023785, 1)
-                m.diffuse_color = (0.8307698767746546, 0.026241221894849898, 0.00972121732023785, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['90']
+                m.diffuse_color = mmColor['90']
             elif m.name == 'MI_PS_Armor_95':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.83879901174074, 0.010329823029626936, 0.042311410620809675, 1)
-                m.diffuse_color = (0.83879901174074, 0.010329823029626936, 0.042311410620809675, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['95']
+                m.diffuse_color = mmColor['95']
             elif m.name == 'MI_PS_Armor_100':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.846873231509858, 0.010329823029626936, 0.1589608350608804, 1)
-                m.diffuse_color = (0.846873231509858, 0.010329823029626936, 0.1589608350608804, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['100']
+                m.diffuse_color = mmColor['100']
+            elif m.name == 'MI_PS_Armor_110':
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['110']
+                m.diffuse_color = mmColor['110']
             elif m.name == 'MI_PS_Armor_120':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.846873231509858, 0.010960094006488246, 0.3712376804741491, 1)
-                m.diffuse_color = (0.846873231509858, 0.010960094006488246, 0.3712376804741491, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['120']
+                m.diffuse_color = mmColor['120']
             elif m.name == 'MI_PS_Armor_140':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.8549926081242338, 0.010960094006488246, 0.7011018919329731, 1)
-                m.diffuse_color = (0.8549926081242338, 0.010960094006488246, 0.7011018919329731, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['140']
+                m.diffuse_color = mmColor['140']
             elif m.name == 'MI_PS_Armor_145':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.6239603916750761, 0.011612245179743885, 0.8631572134541023, 1)
-                m.diffuse_color = (0.6239603916750761, 0.011612245179743885, 0.8631572134541023, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['145']
+                m.diffuse_color = mmColor['145']
             elif m.name == 'MI_PS_Armor_150':
-                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.32314320911295075, 0.012286488356915872, 0.8631572134541023, 1)
-                m.diffuse_color = (0.32314320911295075, 0.012286488356915872, 0.8631572134541023, 1)
+                m.node_tree.nodes["Principled BSDF"].inputs[0].default_value = mmColor['150']
+                m.diffuse_color = mmColor['150']
 
         #clear customdata normals (idk if this is even needed :|)
         s = bpy.context.scene        
