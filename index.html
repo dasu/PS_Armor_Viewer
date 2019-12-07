@@ -173,7 +173,7 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-            Post Scriptum Armour Viewer v0.6
+            Post Scriptum Armour Viewer v0.75
           </h2>
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
@@ -199,7 +199,9 @@
 		<option value="Panzer_38t">Panzer 38t (Unreleased?)</option>
 		<option value="Panzer_II">Panzer II (Unreleased?)</option>
 		<option value="Panzer_III">Panzer III</option>
+		<option value="Panzer_III_F">Panzer III F (Unreleased?)</option>
 		<option value="Panzer_IV">Panzer IV</option>
+		<option value="Panzer_IV_D">Panzer IV D (Unreleased?)</option>
 		<option value="Panzer_V">Panzer V Panther</option>
 		<option value="Panzer_VI_Tiger">Panzer VI Tiger</option>
 		<option value="Sdkfz_222">Sd. Kfz 222</option>
@@ -207,6 +209,13 @@
 		<option value="Sdkfz_234">Sd. Kfz 234 Puma</option>
 		<option value="Stug_III">Stug III</option>
       </optgroup>
+	  <optgroup label="French">
+	    <option value="Hotchkiss_H35">Hotchkiss H35 (Unreleased?)</option>
+		<option value="Panhard_178">Panhard 178 (Unreleased?)</option>
+		<option value="Renault_B1">Renault B1 (Unreleased?)</option>
+		<option value="Renault_R35">Renault R35 (Unreleased?)</option>
+		<option value="Somua_S35">Hotchkiss (Unreleased?)</option>
+	  </optgroup>
 	  <optgroup label="UK">
 	    <option value="Churchill_Mk_IV">Churchill Mk IV</option>
 		<option value="Cromwell">Cromwell</option>
@@ -322,6 +331,10 @@
 					button.height = "30px";
 					button.color = "#000000";
 					button.background = value;
+					button.children[0].color = "white"
+					button.children[0].shadowColor= "black";
+					button.children[0].shadowOffsetX = 2;
+					button.children[0].shadowOffsetY = 2;
 					button.onPointerClickObservable.add(function(e, t) {
 						if (t.target.name == lastclicked) {
 							meshes.forEach(function(mesh) {
@@ -362,6 +375,10 @@
 					button.height = "30px";
 					button.color = "#000000";
 					button.background = value;
+					button.children[0].color = "white"
+					button.children[0].shadowColor= "black";
+					button.children[0].shadowOffsetX = 2;
+					button.children[0].shadowOffsetY = 2;
 					button.onPointerClickObservable.add(function(e, t) {
 						if (t.target.name == lastclicked) {
 							meshes.forEach(function(mesh) {
@@ -492,6 +509,10 @@
 					button.height = "30px";
 					button.color = "#000000";
 					button.background = value;
+					button.children[0].color = "white"
+					button.children[0].shadowColor= "black";
+					button.children[0].shadowOffsetX = 2;
+					button.children[0].shadowOffsetY = 2;
 					button.onPointerClickObservable.add(function(e, t) {
 						if (t.target.name == lastclicked) {
 							meshes.forEach(function(mesh) {
@@ -532,6 +553,10 @@
 					button.height = "30px";
 					button.color = "#000000";
 					button.background = value;
+					button.children[0].color = "white"
+					button.children[0].shadowColor= "black";
+					button.children[0].shadowOffsetX = 2;
+					button.children[0].shadowOffsetY = 2;
 					button.onPointerClickObservable.add(function(e, t) {
 						if (t.target.name == lastclicked) {
 							meshes.forEach(function(mesh) {
