@@ -173,7 +173,7 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-            Post Scriptum Armour Viewer v0.75
+            Post Scriptum Armour Viewer v0.77
           </h2>
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
@@ -251,7 +251,10 @@
 			// Add lights to the scene
 			var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
 			// Add and manipulate meshes in the scene
-			BABYLON.SceneLoader.ImportMesh("", "./new/", "fft.glb", scene, function(meshes) {
+			var firstload = 'Sherman_Firefly';
+			var firstload = (new URL(window.location.href)).searchParams.get('armor') ? (new URL(window.location.href)).searchParams.get('armor'): 'Sherman_Firefly'
+			document.getElementById('dd').value = firstload;			
+			BABYLON.SceneLoader.ImportMesh("", "./new/", firstload+".glb", scene, function(meshes) {
 				//scene.createDefaultCameraOrLight(true, true, true);
 				//scene.createDefaultEnvironment();
 				var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
