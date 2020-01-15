@@ -173,7 +173,7 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-            Post Scriptum Armour Viewer v0.80
+            Post Scriptum Armour Viewer v0.825
           </h2>
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
@@ -182,7 +182,8 @@
             This is a viewer of the collision armor model and internal components of Post Scriptum.<br>
 			Please note that the models are (mostly) from the 4.16 version, but I don't believe anything has changed.<br>
 			Everything shown is a very close approximation, maybe when the SDK drops I can show more accurate info.<br>
-			If you run into any bugs, feel free to report them on <a href="https://github.com/dasu/PS_Armor_viewer">github</a>.
+			If you run into any bugs, feel free to report them on <a href="https://github.com/dasu/PS_Armor_viewer">github</a>.<br>
+			<a href="https://docs.google.com/spreadsheets/d/1XI5DwCRs92sU2nq2H42PncfRDnnjVk21pbkPTBIwQxE/edit#gid=0">Penetration curves source</a>
           </p>
         </main>
         <footer class="modal__footer">
@@ -237,7 +238,9 @@
 		var stackPanel = new BABYLON.GUI.StackPanel();
 		var stackInternalPanel = new BABYLON.GUI.StackPanel();
 		var stackOutside = new BABYLON.GUI.StackPanel();
+		var penStack = new BABYLON.GUI.StackPanel();
 		var lastclicked = null;
+		var pen = null;
 		/******* Add the create scene function ******/
 		var createScene = function() {
 
@@ -273,10 +276,29 @@
 				stackOutside.addControl(stackPanel);
 				advancedTexture.addControl(stackOutside);
 				advancedTexture.addControl(stackInternalPanel);
+				advancedTexture.addControl(penStack);
 				var armourindex = []
 				var armourstack = {}
 				var crewstack = {}
-				checkbox = checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
+				pencheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Penetration Curves", function(value){
+					if(value){
+						pen = new BABYLON.GUI.Image("pen", "./pen/"+firstload+".png");
+						pen.autoScale = 1;
+						pen.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+						penStack.width = "579px";
+						penStack.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+						penStack.addControl(pen);
+					}
+					else{
+						if(pen){
+							penStack.removeControl(pen);
+						}
+					}
+				});
+				pencheckbox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+				pencheckbox.children[0].isChecked = false;
+				stackInternalPanel.addControl(pencheckbox);
+				checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
 					if (value) {
 						scene.meshes.forEach(function(mesh) {
 							if (!mesh.material) {
@@ -438,6 +460,7 @@
 			})
 			stackPanel.clearControls();
 			stackInternalPanel.clearControls();
+			penStack.clearControls();
 			BABYLON.SceneLoader.ImportMesh("", "./new/", file + ".glb", scene, function(meshes) {
 				var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 				stackPanel.clearControls();
@@ -450,10 +473,30 @@
 				stackOutside.addControl(stackPanel);
 				advancedTexture.addControl(stackOutside);
 				advancedTexture.addControl(stackInternalPanel);
+				advancedTexture.addControl(penStack);
 				var armourindex = [];
 				var armourstack = {};
 				var crewstack = {};
-				checkbox = checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
+				pencheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Penetration Curves", function(value){
+					if(value){
+						pen = new BABYLON.GUI.Image("pen", "./pen/"+file+".png");
+						pen.autoScale = 1;
+						pen.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+						penStack.width = "579px";
+						penStack.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+						penStack.addControl(pen);
+					}
+					else{
+						if(pen){
+							penStack.removeControl(pen);
+						}
+					}
+				});
+				pencheckbox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+				pencheckbox.children[0].isChecked = false;
+				stackInternalPanel.addControl(pencheckbox);
+				//penstuffend
+				checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
 					if (value) {
 						scene.meshes.forEach(function(mesh) {
 							if (!mesh.material) {
