@@ -1,0 +1,407 @@
+{
+	"Jagdpanzer_IV": {
+		"HP": 1300,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "2 views, No periscope, Openable Hatch",
+			"gunner": "No turret, can aim 11:45 - 12:15, periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APCBC": 24,
+			"APCR": 20,
+			"HE": 44,
+			"MG": "250 | 12x"
+		}
+	},
+	"Panzer_38t": {
+		"HP": 1200,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "2 views, No periscope, No openable Hatch",
+			"gunner": "Periscope",
+			"hullgunner": "Can aim 11:15 - 12:45, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APC": 46,
+			"APCR": 8,
+			"HE": 36,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 12x"
+		}
+	},
+	"Panzer_II": {
+		"HP": 1000,
+		"seats": 2,
+		"seatinfo": {
+			"driver": "2 views, no persicope, no openable hatch",
+			"gunner": "periscope/commander view"
+		},
+		"ammo": {
+			"AP": 200,
+			"HE": 150,
+			"MG": "250 | 12x"
+		}
+	},
+	"Panzer_III": {
+		"HP": 1200,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "2 views, no periscope, no openable hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APC": 30,
+			"APCR": 15,
+			"HE": 45,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 14x"
+		}
+	},
+	"Panzer_III_F": {
+		"HP": 1200,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "2 views, no periscope, no openable hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11:15 - 12:45, NO periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APC": 45,
+			"HE": 45,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 14x"
+		}
+	},
+	"Panzer_IV": {
+		"HP": 1500,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "3 views, no periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APCBC": 30,
+			"APCR": 15,
+			"HE": 42,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 14x"
+		}
+	},
+	"Panzer_IV_D": {
+		"HP": 1200,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "3 views, no periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APCBC": 45,
+			"HE": 42,
+			"Smoke": 8,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 14x"
+		}
+	},
+	"Panzer_V": {
+		"HP": 1700,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "3 views, periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APCBC": 30,
+			"APCR": 15,
+			"HE": 40,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 14x"
+		}
+	},
+	"Panzer_VI_Tiger": {
+		"HP": 1800,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "3 views, periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APCBC": 30,
+			"APCR": 15,
+			"HE": 45,
+			"MG": "250 | 12x",
+			"HullMG": "250 | 14x"
+		}
+	},
+	"Sdkfz_222": {
+		"HP": 500,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "No zoom, No Periscope, openable hatch",
+			"gunner": "No 'true' periscope, but can look around and raise your head with 'Space'.  Can be shot out easily.",
+			"commander": "2 views, No 'true' periscope, but can look around and raise your head with 'Space'.  Can be shot out easily."
+		},
+		"ammo": {
+			"API-T": 250,
+			"HE": 250,
+			"MG": "250 | 12x"
+		}
+	},
+	"Sdkfz_232": {
+		"HP": 700,
+		"seats": 2,
+		"seatinfo": {
+			"driver": "No periscope, openable hatch",
+			"gunner": "2 views, no periscope"
+		},
+		"ammo": {
+			"API-T": 250,
+			"HE": 200,
+			"MG": "250 | 12x"
+		}
+	},
+	"Sdkfz_234": {
+		"HP": 750,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "No periscope, openable hatch",
+			"gunner": "periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APC": 38,
+			"APCR": 7,
+			"HE": 45,
+			"MG": "250 | 12x"
+		}
+	},
+	"Stug_III": {
+		"HP": 1300,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "2 views, No periscope, No openable hatch",
+			"gunner": "No turret, Can aim 11:45 - 12:15, has a periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APCBC": 35,
+			"APCR": 10,
+			"HE": 40,
+			"Smoke": 8,
+			"MG": "250 | 12x"
+		}
+	},
+	"Hotchkiss_H35": {
+		"HP": 1000,
+		"seats": 2,
+		"seatinfo": {
+			"driver": "No Periscope, openable hatch",
+			"gunner": "periscope/commander"
+		},
+		"ammo": {
+			"APCR": 40,
+			"HE": 36,
+			"MG": "150 | 16x"
+		}
+	},
+	"Panhard_178": {
+		"HP": 700,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "No Periscope, openable hatch (with large side views!)",
+			"gunner": "periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"AP": 90,
+			"HE": 60,
+			"MG": "150 | 25x"
+		}
+	},
+	"Renault_B1": {
+		"HP": 1200,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "periscope, no openable hatch",
+			"gunner": "periscope/commander",
+			"hullgunner": "Can aim 11:50-12:10"
+		},
+		"ammo": {
+			"APC": 20,
+			"HE": 30,
+			"MG": "250 | 5x",
+			"HullHE": 74
+		}
+	},
+	"Renault_R35": {
+		"HP": 1000,
+		"seats": 2,
+		"seatinfo": {
+			"driver": "No Periscope, openable hatch",
+			"gunner": "periscope/commander"
+		},
+		"ammo": {
+			"APC": 38,
+			"HE": 20,
+			"MG": "150 | 12x"
+		}
+	},
+	"Somua_S35": {
+		"HP": 1100,
+		"seats": 2,
+		"seatinfo": {
+			"driver": "periscope, openable hatch",
+			"gunner": "periscope/commander"
+		},
+		"ammo": {
+			"APC": 20,
+			"HE": 30,
+			"MG": "250 | 5x"
+		}
+	},
+	"Churchill_Mk_IV": {
+		"HP": 1800,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "periscope, openable hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11:30 - 12:30, although view is blocked slightly on the left, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APC": 25,
+			"APCBC": 20,
+			"HE": 42,
+			"MG": "250 | 12x",
+			"HullMG": "225 | 24x"
+		}
+	},
+	"Cromwell": {
+		"HP": 1400,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "periscope, openable hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"AP": 25,
+			"APCBC": 20,
+			"HE": 42,
+			"MG": "250 | 12x",
+			"HullMG": "225 | 14x"
+		}
+	},
+	"Daimler": {
+		"HP": 700,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "No periscope, openable hatch with small slide slits, closed view has annoying crossbar in front",
+			"gunner": "periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"AP": 16,
+			"APCBC": 24,
+			"HE": 14,
+			"MG": "250 | 10x"
+		}
+	},
+	"Matilda": {
+		"HP": 800,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "periscope, openable hatch",
+			"gunner": "periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APC": 40,
+			"APCBC": 20,
+			"HE": 20,
+			"MG": "250 | 12x"
+		}
+	},
+	"Sherman_Firefly": {
+		"HP": 1700,
+		"seats": 3,
+		"seatinfo": {
+			"driver": "periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APC": 13,
+			"APCBC": 27,
+			"HE": 30,
+			"WP": 7,
+			"MG": "250 | 12x"
+		}
+	},
+	"Staghound_T17": {
+		"HP": 700,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "periscope, openable hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"APC": 30,
+			"HE": 18,
+			"MG": "250 | 5x",
+			"HullMG": "250 | 10x"
+		}
+	},
+	"M5_Stuart": {
+		"HP": 700,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11:30 - 12:30, periscope",
+			"commander": "2 views"
+		},
+		"ammo": {
+			"AP": 93,
+			"APC": 30,
+			"HE": 123,
+			"MG": "250 | 12x",
+			"HullMG": "225 | 14x"
+		}
+	},
+	"M18_Hellcat": {},
+	"Sherman_M4A3": {
+		"HP": 1200,
+		"seats": 4,
+		"seatinfo": {
+			"driver": "periscope, openable stick-out-head hatch",
+			"gunner": "periscope",
+			"hullgunner": "Can aim 11 - 1, periscope",
+			"commander": "3 views"
+		},
+		"ammo": {
+			"APCR": 15,
+			"AP": 20,
+			"APCBC": 10,
+			"HE": 25,
+			"Smoke": 7,
+			"MG": "250 | 12x",
+			"HullMG": "225 | 14x"
+		}
+	}
+}
