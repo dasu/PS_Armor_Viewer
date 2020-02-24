@@ -1,6 +1,8 @@
 {
 	"Jagdpanzer_IV": {
 		"HP": 1300,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "2 views, No periscope, Openable Hatch",
@@ -12,10 +14,13 @@
 			"APCR": 20,
 			"HE": 44,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "75mm_AP"
 	},
 	"Panzer_38t": {
 		"HP": 1200,
+		"tickets": 10,
+		"type": "Light/Medium",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "2 views, No periscope, No openable Hatch",
@@ -29,10 +34,13 @@
 			"HE": 36,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 12x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Panzer_II": {
 		"HP": 1000,
+		"tickets": 10,
+		"type": "Recon",
 		"seats": 2,
 		"seatinfo": {
 			"driver": "2 views, no persicope, no openable hatch",
@@ -42,10 +50,13 @@
 			"AP": 200,
 			"HE": 150,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "20mm_AP"
 	},
 	"Panzer_III": {
 		"HP": 1200,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "2 views, no periscope, no openable hatch",
@@ -59,10 +70,13 @@
 			"HE": 45,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Panzer_III_F": {
 		"HP": 1200,
+		"tickets": 10,
+		"type": "Heavy",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "2 views, no periscope, no openable hatch",
@@ -75,10 +89,13 @@
 			"HE": 45,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Panzer_IV": {
 		"HP": 1500,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "3 views, no periscope, openable stick-out-head hatch",
@@ -92,10 +109,13 @@
 			"HE": 42,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
-		}
+		},
+		"damageType": "75mm_AP"
 	},
 	"Panzer_IV_D": {
 		"HP": 1200,
+		"tickets": 10,
+		"type": "Heavy",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "3 views, no periscope, openable stick-out-head hatch",
@@ -109,10 +129,13 @@
 			"Smoke": 8,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
-		}
+		},
+		"damageType": "75mm_AP"
 	},
 	"Panzer_V": {
 		"HP": 1700,
+		"tickets": 15,
+		"type": "Heavy",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "3 views, periscope, openable stick-out-head hatch",
@@ -126,10 +149,13 @@
 			"HE": 40,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
-		}
+		},
+		"damageType": "75mm_AP"
 	},
 	"Panzer_VI_Tiger": {
 		"HP": 1800,
+		"tickets": 15,
+		"type": "Heavy",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "3 views, periscope, openable stick-out-head hatch",
@@ -143,10 +169,13 @@
 			"HE": 45,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
-		}
+		},
+		"damageType": "88mm_AP"
 	},
 	"Sdkfz_222": {
 		"HP": 500,
+		"tickets": 10,
+		"type": "Recon",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "No zoom, No Periscope, openable hatch",
@@ -157,10 +186,13 @@
 			"API-T": 250,
 			"HE": 250,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "20mm_AP"
 	},
 	"Sdkfz_232": {
 		"HP": 700,
+		"tickets": 10,
+		"type": "Recon",
 		"seats": 2,
 		"seatinfo": {
 			"driver": "No periscope, openable hatch",
@@ -170,10 +202,13 @@
 			"API-T": 250,
 			"HE": 200,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "20mm_AP"
 	},
 	"Sdkfz_234": {
 		"HP": 750,
+		"tickets": 10,
+		"type": "Light/Medium",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "No periscope, openable hatch",
@@ -185,11 +220,14 @@
 			"APCR": 7,
 			"HE": 45,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Stug_III": {
 		"HP": 1300,
 		"seats": 3,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seatinfo": {
 			"driver": "2 views, No periscope, No openable hatch",
 			"gunner": "No turret, Can aim 11:45 - 12:15, has a periscope",
@@ -201,10 +239,13 @@
 			"HE": 40,
 			"Smoke": 8,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "75mm_AP"
 	},
 	"Hotchkiss_H35": {
 		"HP": 1000,
+		"tickets": 10,
+		"type": "Heavy",
 		"seats": 2,
 		"seatinfo": {
 			"driver": "No Periscope, openable hatch",
@@ -214,10 +255,13 @@
 			"APCR": 40,
 			"HE": 36,
 			"MG": "150 | 16x"
-		}
+		},
+		"damageType": "75mm_AP"
 	},
 	"Panhard_178": {
 		"HP": 700,
+		"tickets": 10,
+		"type": "Recon",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "No Periscope, openable hatch (with large side views!)",
@@ -228,10 +272,13 @@
 			"AP": 90,
 			"HE": 60,
 			"MG": "150 | 25x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Renault_B1": {
 		"HP": 1200,
+		"tickets": 10,
+		"type": "Heavy",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "periscope, no openable hatch",
@@ -243,10 +290,13 @@
 			"HE": 30,
 			"MG": "250 | 5x",
 			"HullHE": 74
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Renault_R35": {
 		"HP": 1000,
+		"tickets": 10,
+		"type": "Light/Medium",
 		"seats": 2,
 		"seatinfo": {
 			"driver": "No Periscope, openable hatch",
@@ -256,10 +306,13 @@
 			"APC": 38,
 			"HE": 20,
 			"MG": "150 | 12x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Somua_S35": {
 		"HP": 1100,
+		"tickets": 10,
+		"type": "Light/Medium",
 		"seats": 2,
 		"seatinfo": {
 			"driver": "periscope, openable hatch",
@@ -269,10 +322,13 @@
 			"APC": 20,
 			"HE": 30,
 			"MG": "250 | 5x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Churchill_Mk_IV": {
 		"HP": 1800,
+		"tickets": 15,
+		"type": "Heavy",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "periscope, openable hatch",
@@ -286,10 +342,13 @@
 			"HE": 42,
 			"MG": "250 | 12x",
 			"HullMG": "225 | 24x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Cromwell": {
 		"HP": 1400,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "periscope, openable hatch",
@@ -303,11 +362,14 @@
 			"HE": 42,
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Daimler": {
 		"HP": 700,
 		"seats": 3,
+		"tickets": 10,
+		"type": "Recon",
 		"seatinfo": {
 			"driver": "No periscope, openable hatch with small slide slits, closed view has annoying crossbar in front",
 			"gunner": "periscope",
@@ -318,10 +380,13 @@
 			"APCBC": 24,
 			"HE": 14,
 			"MG": "250 | 10x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Matilda": {
 		"HP": 800,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "periscope, openable hatch",
@@ -333,10 +398,13 @@
 			"APCBC": 20,
 			"HE": 20,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"Sherman_Firefly": {
 		"HP": 1700,
+		"tickets": 15,
+		"type": "Heavy",
 		"seats": 3,
 		"seatinfo": {
 			"driver": "periscope, openable stick-out-head hatch",
@@ -349,10 +417,13 @@
 			"HE": 30,
 			"WP": 7,
 			"MG": "250 | 12x"
-		}
+		},
+		"damageType": "88mm_AP"
 	},
 	"Staghound_T17": {
 		"HP": 700,
+		"tickets": 10,
+		"type": "Recon",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "periscope, openable hatch",
@@ -365,10 +436,13 @@
 			"HE": 18,
 			"MG": "250 | 5x",
 			"HullMG": "250 | 10x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"M5_Stuart": {
 		"HP": 700,
+		"tickets": 10,
+		"type": "Light/Medium",
 		"seats": 4,
 		"seatinfo": {
 			"driver": "periscope, openable stick-out-head hatch",
@@ -382,12 +456,15 @@
 			"HE": 123,
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
-		}
+		},
+		"damageType": "40mm_AP"
 	},
 	"M18_Hellcat": {},
 	"Sherman_M4A3": {
 		"HP": 1200,
 		"seats": 4,
+		"tickets": 15,
+		"type": "Light/Medium",
 		"seatinfo": {
 			"driver": "periscope, openable stick-out-head hatch",
 			"gunner": "periscope",
@@ -402,6 +479,7 @@
 			"Smoke": 7,
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
-		}
+		},
+		"damageType": "75mm_AP"
 	}
 }
