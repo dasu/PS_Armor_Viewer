@@ -15,7 +15,14 @@
 			"HE": 44,
 			"MG": "250 | 12x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "200HP x2 (400)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
+		},
+		"notes": ""
 	},
 	"Panzer_38t": {
 		"HP": 1200,
@@ -35,7 +42,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 12x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "90HP x2 (180)",
+			"40mm_AP": "330HP x2 (660)",
+			"75mm_AP": "500HP x2 (1000)",
+			"88mm_AP": "600HP x2 (1200)"
+		},
+		"notes": ""
 	},
 	"Panzer_II": {
 		"HP": 1000,
@@ -51,7 +65,14 @@
 			"HE": 150,
 			"MG": "250 | 12x"
 		},
-		"damageType": "20mm_AP"
+		"damageType": "20mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "330HP x2 (660)",
+			"75mm_AP": "500HP x2 (1000)",
+			"88mm_AP": "600HP x2 (1200)"
+		},
+		"notes": "Panzer II does 33% less damage then other 20mm_AP damage types.  Example: 10 HP damage instead of 15."
 	},
 	"Panzer_III": {
 		"HP": 1200,
@@ -71,7 +92,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "330HP x2 (660)",
+			"75mm_AP": "500HP x2 (1000)",
+			"88mm_AP": "600HP x2 (1200)"
+		},
+		"notes": ""
 	},
 	"Panzer_III_F": {
 		"HP": 1200,
@@ -90,7 +118,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "330HP x2 (660)",
+			"75mm_AP": "500HP x2 (1000)",
+			"88mm_AP": "600HP x2 (1200)"
+		},
+		"notes": ""
 	},
 	"Panzer_IV": {
 		"HP": 1500,
@@ -110,7 +145,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "300HP x2 (600)",
+			"75mm_AP": "400HP x2 (800)",
+			"88mm_AP": "500HP x2 (1000)"
+		},
+		"notes": ""
 	},
 	"Panzer_IV_D": {
 		"HP": 1200,
@@ -130,7 +172,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "300HP x2 (600)",
+			"75mm_AP": "400HP x2 (800)",
+			"88mm_AP": "500HP x2 (1000)"
+		},
+		"notes": ""
 	},
 	"Panzer_V": {
 		"HP": 1700,
@@ -150,7 +199,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "300HP x2 (600)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
+		},
+		"notes": ""
 	},
 	"Panzer_VI_Tiger": {
 		"HP": 1800,
@@ -170,7 +226,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
-		"damageType": "88mm_AP"
+		"damageType": "88mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "300HP x2 (600)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
+		},
+		"notes": ""
 	},
 	"Sdkfz_222": {
 		"HP": 500,
@@ -187,7 +250,14 @@
 			"HE": 250,
 			"MG": "250 | 12x"
 		},
-		"damageType": "20mm_AP"
+		"damageType": "20mm_AP",
+		"damageFrom":{
+			"20mm_AP": "15HP x2 (30)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "240HP x2 (480)",
+			"88mm_AP": "350HP x2 (700)"
+		},
+		"notes": "Because of it's geometry, the 222 can take extra HP damage from one shot. (x3+ sometimes)"
 	},
 	"Sdkfz_232": {
 		"HP": 700,
@@ -203,7 +273,14 @@
 			"HE": 200,
 			"MG": "250 | 12x"
 		},
-		"damageType": "20mm_AP"
+		"damageType": "20mm_AP",
+		"damageFrom":{
+			"20mm_AP": "15HP x2 (30)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "240HP x2 (480)",
+			"88mm_AP": "350HP x2 (700)"
+		},
+		"notes": ""
 	},
 	"Sdkfz_234": {
 		"HP": 750,
@@ -221,7 +298,14 @@
 			"HE": 45,
 			"MG": "250 | 12x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "15HP x2 (30)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "200HP x2 (400)",
+			"88mm_AP": "200HP x2 (400)"
+		},
+		"notes": "The Puma does 50% more damage compared to other 40mm damage types. (example: 450HP damage instead of 300HP)"
 	},
 	"Stug_III": {
 		"HP": 1300,
@@ -240,7 +324,14 @@
 			"Smoke": 8,
 			"MG": "250 | 12x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "1.5HP x2 (30)",
+			"40mm_AP": "300HP x2 (600)",
+			"75mm_AP": "400HP x2 (800)",
+			"88mm_AP": "500HP x2 (1000)"
+		},
+		"notes": ""
 	},
 	"Hotchkiss_H35": {
 		"HP": 1000,
@@ -256,7 +347,14 @@
 			"HE": 36,
 			"MG": "150 | 16x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Panhard_178": {
 		"HP": 700,
@@ -273,7 +371,14 @@
 			"HE": 60,
 			"MG": "150 | 25x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Renault_B1": {
 		"HP": 1200,
@@ -291,7 +396,14 @@
 			"MG": "250 | 5x",
 			"HullHE": 74
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Renault_R35": {
 		"HP": 1000,
@@ -307,7 +419,14 @@
 			"HE": 20,
 			"MG": "150 | 12x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Somua_S35": {
 		"HP": 1100,
@@ -323,7 +442,14 @@
 			"HE": 30,
 			"MG": "250 | 5x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Churchill_Mk_IV": {
 		"HP": 1800,
@@ -343,7 +469,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 24x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Cromwell": {
 		"HP": 1400,
@@ -363,7 +496,14 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Daimler": {
 		"HP": 700,
@@ -381,7 +521,14 @@
 			"HE": 14,
 			"MG": "250 | 10x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Matilda": {
 		"HP": 800,
@@ -399,7 +546,14 @@
 			"HE": 20,
 			"MG": "250 | 12x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Sherman_Firefly": {
 		"HP": 1700,
@@ -418,7 +572,14 @@
 			"WP": 7,
 			"MG": "250 | 12x"
 		},
-		"damageType": "88mm_AP"
+		"damageType": "88mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"Staghound_T17": {
 		"HP": 700,
@@ -437,7 +598,14 @@
 			"MG": "250 | 5x",
 			"HullMG": "250 | 10x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
 	"M5_Stuart": {
 		"HP": 700,
@@ -457,9 +625,18 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
 		},
-		"damageType": "40mm_AP"
+		"damageType": "40mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	},
-	"M18_Hellcat": {},
+	"M18_Hellcat": {
+		"notes": "Existed in game files but was removed at some point.  May or may not release in the future."
+	},
 	"Sherman_M4A3": {
 		"HP": 1200,
 		"seats": 4,
@@ -480,6 +657,13 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
 		},
-		"damageType": "75mm_AP"
+		"damageType": "75mm_AP",
+		"damageFrom":{
+			"20mm_AP": "",
+			"40mm_AP": "",
+			"75mm_AP": "",
+			"88mm_AP": ""
+		},
+		"notes": ""
 	}
 }
