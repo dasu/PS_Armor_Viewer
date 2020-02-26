@@ -326,7 +326,7 @@
 		},
 		"damageType": "75mm_AP",
 		"damageFrom":{
-			"20mm_AP": "1.5HP x2 (30)",
+			"20mm_AP": "1.5HP x2 (3)",
 			"40mm_AP": "300HP x2 (600)",
 			"75mm_AP": "400HP x2 (800)",
 			"88mm_AP": "500HP x2 (1000)"
@@ -349,10 +349,10 @@
 		},
 		"damageType": "75mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "330HP x2 (660)",
+			"75mm_AP": "500HP x2 (1000)",
+			"88mm_AP": "600HP x2 (1200)"
 		},
 		"notes": ""
 	},
@@ -373,10 +373,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "15HP x2 (30)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "240HP x2 (480)",
+			"88mm_AP": "350HP x2 (700)"
 		},
 		"notes": ""
 	},
@@ -398,10 +398,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "200HP x2 (400)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
 		"notes": ""
 	},
@@ -421,10 +421,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "200HP x2 (400)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
 		"notes": ""
 	},
@@ -444,10 +444,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "200HP x2 (400)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
 		"notes": ""
 	},
@@ -471,10 +471,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "200HP x2 (400)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
 		"notes": ""
 	},
@@ -498,12 +498,12 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "240HP x2 (480)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
-		"notes": ""
+		"notes": "The Cromwell seems to be the only vehicle to have a burning effect, which does damage to itself over time at roughly 5HP/s.  It's unknown what exactly triggers it."
 	},
 	"Daimler": {
 		"HP": 700,
@@ -523,10 +523,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "15HP x2 (30)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "240HP x2 (480)",
+			"88mm_AP": "350HP x2 (700)"
 		},
 		"notes": ""
 	},
@@ -548,10 +548,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "240HP x2 (480)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
 		"notes": ""
 	},
@@ -574,10 +574,10 @@
 		},
 		"damageType": "88mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "300HP x2 (600)",
+			"75mm_AP": "300HP x2 (600)",
+			"88mm_AP": "400HP x2 (800)"
 		},
 		"notes": ""
 	},
@@ -600,10 +600,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "37.5HP x2 (75)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "240HP x2 (480)",
+			"88mm_AP": "350HP x2 (700)"
 		},
 		"notes": ""
 	},
@@ -627,10 +627,10 @@
 		},
 		"damageType": "40mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "37.5HP x2 (75)",
+			"40mm_AP": "150HP x2 (300)",
+			"75mm_AP": "240HP x2 (480)",
+			"88mm_AP": "350HP x2 (700)"
 		},
 		"notes": ""
 	},
@@ -659,10 +659,10 @@
 		},
 		"damageType": "75mm_AP",
 		"damageFrom":{
-			"20mm_AP": "",
-			"40mm_AP": "",
-			"75mm_AP": "",
-			"88mm_AP": ""
+			"20mm_AP": "1.5HP x2 (3)",
+			"40mm_AP": "180HP x2 (360)",
+			"75mm_AP": "260HP x2 (520)",
+			"88mm_AP": "340HP x2 (680)"
 		},
 		"notes": ""
 	}
