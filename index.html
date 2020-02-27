@@ -37,7 +37,7 @@
 			.modal__container {
 			  background-color: #fff;
 			  padding: 30px;
-			  max-width: 500px;
+			  max-width: 600px;
 			  max-height: 100vh;
 			  border-radius: 4px;
 			  overflow-y: auto;
@@ -163,9 +163,9 @@
         </style>
         <script src="https://cdn.babylonjs.com/babylon.js"></script>
         <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-	<script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+		<script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
         <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
-	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+		<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     </head>
    <body>
    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
@@ -173,7 +173,7 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-            Post Scriptum Armour Viewer v0.825
+            Post Scriptum Armour Viewer v0.950
           </h2>
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
@@ -183,8 +183,27 @@
 			Please note that the models are (mostly) from the 4.16 version, but I don't believe anything has changed.<br>
 			Everything shown is a very close approximation, maybe when the SDK drops I can show more accurate info.<br>
 			If you run into any bugs, feel free to report them on <a href="https://github.com/dasu/PS_Armor_viewer">github</a>.<br>
+			If you see me in game, say hi! IGN: dasu<br>
 			<a href="https://docs.google.com/spreadsheets/d/1XI5DwCRs92sU2nq2H42PncfRDnnjVk21pbkPTBIwQxE/edit#gid=0">Penetration curves source</a>
           </p>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-2-title">
+            Extra Info
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-2-content">
+          
         </main>
         <footer class="modal__footer">
           <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
@@ -213,7 +232,7 @@
 	  <optgroup label="French (1940)">
 		<option value="Hotchkiss_H35">Hotchkiss H35</option>
 		<option value="Panhard_178">Panhard 178</option>
-		<option value="Renault_B1">Renault B1</option>
+		<option value="Renault_B1">Renault Char B1</option>
 		<option value="Renault_R35">Renault R35</option>
 		<option value="Somua_S35">Somua S35</option>
 	  </optgroup>
@@ -239,6 +258,7 @@
 		var stackInternalPanel = new BABYLON.GUI.StackPanel();
 		var stackOutside = new BABYLON.GUI.StackPanel();
 		var penStack = new BABYLON.GUI.StackPanel();
+		var extrainfoStack = new BABYLON.GUI.StackPanel();
 		var lastclicked = null;
 		var pen = null;
 		/******* Add the create scene function ******/
@@ -277,9 +297,29 @@
 				advancedTexture.addControl(stackOutside);
 				advancedTexture.addControl(stackInternalPanel);
 				advancedTexture.addControl(penStack);
+				advancedTexture.addControl(extrainfoStack);
 				var armourindex = []
 				var armourstack = {}
 				var crewstack = {}
+				
+				extrainfocheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Extra Info", function(value){
+					if(value){
+						table = buildExtraInfo(firstload);
+						var md2 = document.getElementById('modal-2-content');
+						md2.appendChild(table);
+						function onClose(modal){
+							extrainfocheckbox.children[0].isChecked = false;
+							md2.removeChild(md2.childNodes[1]);
+						}
+						MicroModal.show('modal-2', {
+							onClose: onClose
+						});
+					}
+				});
+				extrainfocheckbox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+				extrainfocheckbox.children[0].isChecked = false;
+				stackInternalPanel.addControl(extrainfocheckbox);
+				
 				pencheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Penetration Curves", function(value){
 					if(value){
 						pen = new BABYLON.GUI.Image("pen", "./pen/"+firstload+".png");
@@ -452,6 +492,18 @@
 		window.addEventListener("resize", function() {
 			engine.resize();
 		});
+		
+		//armors.json download
+		var armors = null;
+		var request = new XMLHttpRequest();
+		request.open('GET', 'armors.json', true);
+
+		request.onload = function() {
+			if (this.status >= 200 && this.status < 400) {
+				armors = JSON.parse(this.response);
+			}
+		}
+		request.send()
 
 		document.getElementById("dd").addEventListener("change", function() {
 			file = document.getElementById("dd").value
@@ -474,9 +526,29 @@
 				advancedTexture.addControl(stackOutside);
 				advancedTexture.addControl(stackInternalPanel);
 				advancedTexture.addControl(penStack);
+				advancedTexture.addControl(extrainfoStack);
 				var armourindex = [];
 				var armourstack = {};
 				var crewstack = {};
+				
+				extrainfocheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Extra Info", function(value){
+					if(value){
+						table = buildExtraInfo(file);
+						var md2 = document.getElementById('modal-2-content');
+						md2.appendChild(table);
+						function onClose(modal){
+							extrainfocheckbox.children[0].isChecked = false;
+							md2.removeChild(md2.childNodes[1]);
+						}
+						MicroModal.show('modal-2', {
+							onClose: onClose
+						});
+					}
+				});
+				extrainfocheckbox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+				extrainfocheckbox.children[0].isChecked = false;
+				stackInternalPanel.addControl(extrainfocheckbox);
+				
 				pencheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Penetration Curves", function(value){
 					if(value){
 						pen = new BABYLON.GUI.Image("pen", "./pen/"+file+".png");
@@ -495,7 +567,7 @@
 				pencheckbox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
 				pencheckbox.children[0].isChecked = false;
 				stackInternalPanel.addControl(pencheckbox);
-				//penstuffend
+				 
 				checkbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader('Internal Components', function(value) {
 					if (value) {
 						scene.meshes.forEach(function(mesh) {
@@ -636,6 +708,154 @@
 				var armourindex = [];
 			})
 		});
+		
+		function buildExtraInfo(cur){
+			var a = armors[cur]
+			if(cur == 'M18_Hellcat'){
+				p = document.createElement("p")
+				p.innerText = armors['M18_Hellcat'].notes
+				return p
+			}
+			var table = document.createElement('table');
+			table.style = "undefined;table-layout:fixed;width:500px;"
+			var colgroup = document.createElement('colgroup');
+			var col1 = document.createElement('col');
+			var col2 = document.createElement('col');
+			col1.style = "width: 200px";
+			col2.style = "width: 300px";
+			colgroup.appendChild(col1);
+			colgroup.appendChild(col2);
+			table.appendChild(colgroup);
+			//HP
+			var trhp = document.createElement('tr');
+			var tdhp = document.createElement('td');
+			var tdhpl = document.createElement('td');
+			tdhpl.style = "font-weight: bold";
+			tdhpl.innerText = "HP";
+			tdhp.innerText = a.HP;
+			trhp.appendChild(tdhpl);
+			trhp.append(tdhp);
+			table.append(trhp);
+			//Tickets
+			var trtk = document.createElement('tr');
+			var tdtk = document.createElement('td');
+			var tdtkl = document.createElement('td');
+			tdtkl.style = "font-weight: bold";
+			tdtkl.innerText = "Tickets";
+			tdtk.innerText = a.tickets;
+			trtk.appendChild(tdtkl);
+			trtk.append(tdtk);
+			table.append(trtk);
+			//Seats
+			var trseat = document.createElement('tr');
+			var tdseatl = document.createElement('td');
+			var tdseat = document.createElement('td');
+			tdseatl.style = "font-weight: bold";
+			tdseatl.innerText = "Seats"
+			tdseat.innerText = a.seats
+			trseat.appendChild(tdseatl);
+			trseat.appendChild(tdseat);
+			table.append(trseat);
+			//SeatInfo
+			Object.keys(a.seatinfo).forEach(function(item){
+				var trs = document.createElement('tr');
+				var tdsl = document.createElement('td');
+				var tds = document.createElement('td');
+				
+				tdsl.innerText = item;
+				tdsl.style = "text-transform: capitalize";
+				tds.innerText = a.seatinfo[item];
+				trs.appendChild(tdsl);
+				trs.appendChild(tds);
+				table.appendChild(trs);
+			});
+			//Ammo
+			var trammo = document.createElement('tr');
+			var tdammol = document.createElement('td');
+			var tdammo = document.createElement('td');
+			tdammol.style = "font-weight: bold";
+			tdammol.innerText = "Ammo"
+			tdammo.innerText = ""
+			trammo.appendChild(tdammol);
+			trammo.appendChild(tdammo);
+			table.append(trammo);
+			
+			Object.keys(a.ammo).forEach(function(item){
+				var tra = document.createElement('tr');
+				var tdal = document.createElement('td');
+				var tda = document.createElement('td');
+				
+				tdal.innerText = item;
+				tda.innerText = a.ammo[item];
+				tra.appendChild(tdal);
+				tra.appendChild(tda);
+				table.appendChild(tra);
+			});
+			//seconds between shots
+			var trsbs = document.createElement('tr');
+			var tdsbs = document.createElement('td');
+			var tdsbsl = document.createElement('td');
+			tdsbsl.style = "font-weight: bold";
+			tdsbsl.innerText = "Seconds between shots";
+			tdsbs.innerText = a.secondsBetweenShots;
+			trsbs.appendChild(tdsbsl);
+			trsbs.append(tdsbs);
+			table.append(trsbs);
+			//seconds to 180
+			var trs180 = document.createElement('tr');
+			var tds180 = document.createElement('td');
+			var tds180l = document.createElement('td');
+			tds180l.style = "font-weight: bold";
+			tds180l.innerText = "Seconds to 180 Turret";
+			tds180.innerText = a.secondsTo180Turret;
+			trs180.appendChild(tds180l);
+			trs180.append(tds180);
+			table.append(trs180);
+			//damage type
+			var trdt = document.createElement('tr');
+			var tddt = document.createElement('td');
+			var tddtl = document.createElement('td');
+			tddtl.style = "font-weight: bold";
+			tddtl.innerText = "Damage Type";
+			tddt.innerText = a.damageType;
+			trdt.appendChild(tddtl);
+			trdt.append(tddt);
+			table.append(trdt);
+			//damage from
+			var trdmgf = document.createElement('tr');
+			var tddmgfl = document.createElement('td');
+			var tddmgf = document.createElement('td');
+			tddmgfl.style = "font-weight: bold";
+			tddmgfl.innerText = "Damage From"
+			tddmgf.innerText = ""
+			trdmgf.appendChild(tddmgfl);
+			trdmgf.appendChild(tddmgf);
+			table.append(trdmgf);
+			
+			Object.keys(a.damageFrom).forEach(function(item){
+				var trd = document.createElement('tr');
+				var tddl = document.createElement('td');
+				var tdd = document.createElement('td');
+				
+				tddl.innerText = item;
+				tdd.innerText = a.damageFrom[item];
+				trd.appendChild(tddl);
+				trd.appendChild(tdd);
+				table.appendChild(trd);
+			});
+			//notes
+			var trnt = document.createElement('tr');
+			var tdnt = document.createElement('td');
+			var tdntl = document.createElement('td');
+			tdntl.style = "font-weight: bold";
+			tdntl.innerText = "Notes";
+			tdnt.innerText = a.notes;
+			trnt.appendChild(tdntl);
+			trnt.append(tdnt);
+			table.append(trnt);
+			
+			return table
+		}
     </script>
    </body>
 </html>
