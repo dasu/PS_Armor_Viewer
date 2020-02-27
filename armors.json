@@ -15,6 +15,9 @@
 			"HE": 44,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "6s",
+		"secondsTo180Turret": "N/A",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -42,6 +45,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 12x"
 		},
+		"secondsBetweenShots": "4.25s",
+		"secondsTo180Turret": "13s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "90HP x2 (180)",
@@ -65,6 +71,9 @@
 			"HE": 150,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "0.31s",
+		"secondsTo180Turret": "15s",
+		"firingType": "Automatic",
 		"damageType": "20mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -92,6 +101,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
+		"secondsBetweenShots": "6s",
+		"secondsTo180Turret": "18s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -118,6 +130,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
+		"secondsBetweenShots": "6s",
+		"secondsTo180Turret": "30s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -145,6 +160,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "18s",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -172,6 +190,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
+		"secondsBetweenShots": "4.5s",
+		"secondsTo180Turret": "13s",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -199,6 +220,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
+		"secondsBetweenShots": "8s",
+		"secondsTo180Turret": "18s",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -226,6 +250,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "250 | 14x"
 		},
+		"secondsBetweenShots": "10s",
+		"secondsTo180Turret": "30s",
+		"firingType": "Automatic",
 		"damageType": "88mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -250,6 +277,9 @@
 			"HE": 250,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "0.4s",
+		"secondsTo180Turret": "13s",
+		"firingType": "Automatic",
 		"damageType": "20mm_AP",
 		"damageFrom":{
 			"20mm_AP": "15HP x2 (30)",
@@ -273,6 +303,9 @@
 			"HE": 200,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "0.35s",
+		"secondsTo180Turret": "13s",
+		"firingType": "Automatic",
 		"damageType": "20mm_AP",
 		"damageFrom":{
 			"20mm_AP": "15HP x2 (30)",
@@ -298,6 +331,9 @@
 			"HE": 45,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "6s",
+		"secondsTo180Turret": "16s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "15HP x2 (30)",
@@ -324,6 +360,9 @@
 			"Smoke": 8,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "5s",
+		"secondsTo180Turret": "N/A",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -347,6 +386,9 @@
 			"HE": 36,
 			"MG": "150 | 16x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "11s",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -371,6 +413,9 @@
 			"HE": 60,
 			"MG": "150 | 25x"
 		},
+		"secondsBetweenShots": "4.5s",
+		"secondsTo180Turret": "9s",
+		"firingType": "Manual",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "15HP x2 (30)",
@@ -396,6 +441,9 @@
 			"MG": "250 | 5x",
 			"HullHE": 74
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "18s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -419,6 +467,9 @@
 			"HE": 20,
 			"MG": "150 | 12x"
 		},
+		"secondsBetweenShots": "4.5s",
+		"secondsTo180Turret": "12s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -442,6 +493,9 @@
 			"HE": 30,
 			"MG": "250 | 5x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "18s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -469,6 +523,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 24x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "12s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -496,6 +553,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "12s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -521,6 +581,9 @@
 			"HE": 14,
 			"MG": "250 | 10x"
 		},
+		"secondsBetweenShots": "4s",
+		"secondsTo180Turret": "6s",
+		"firingType": "Manual",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "15HP x2 (30)",
@@ -546,6 +609,9 @@
 			"HE": 20,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "6s",
+		"secondsTo180Turret": "10.5s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -572,6 +638,9 @@
 			"WP": 7,
 			"MG": "250 | 12x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "9s",
+		"firingType": "Automatic",
 		"damageType": "88mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
@@ -598,6 +667,9 @@
 			"MG": "250 | 5x",
 			"HullMG": "250 | 10x"
 		},
+		"secondsBetweenShots": "5s",
+		"secondsTo180Turret": "7s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "37.5HP x2 (75)",
@@ -625,6 +697,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
 		},
+		"secondsBetweenShots": "5s",
+		"secondsTo180Turret": "9s",
+		"firingType": "Automatic",
 		"damageType": "40mm_AP",
 		"damageFrom":{
 			"20mm_AP": "37.5HP x2 (75)",
@@ -657,6 +732,9 @@
 			"MG": "250 | 12x",
 			"HullMG": "225 | 14x"
 		},
+		"secondsBetweenShots": "7s",
+		"secondsTo180Turret": "12s",
+		"firingType": "Automatic",
 		"damageType": "75mm_AP",
 		"damageFrom":{
 			"20mm_AP": "1.5HP x2 (3)",
