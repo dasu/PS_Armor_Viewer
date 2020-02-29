@@ -271,6 +271,7 @@
 			var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 20, new BABYLON.Vector3(0, 0, 0), scene);
 			camera.attachControl(canvas, true);
 			camera.wheelPrecision = 50.0;
+			camera.pinchPrecision = 75.0;
 			// Add lights to the scene
 			var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
 			// Add and manipulate meshes in the scene
