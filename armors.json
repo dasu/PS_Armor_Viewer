@@ -40,7 +40,6 @@
 		},
 		"ammo": {
 			"APC": 46,
-			"APCR": 8,
 			"HE": 36,
 			"MG": "250 | 12x",
 			"HullMG": "250 | 12x"
@@ -81,7 +80,7 @@
 			"75mm_AP": "500HP x2 (1000)",
 			"88mm_AP": "600HP x2 (1200)"
 		},
-		"notes": "Panzer II does 33% less damage then other 20mm_AP damage types.  Example: 10 HP damage instead of 15."
+		"notes": "20mm_AP types can not cause an instant 1 hit kill ammo box explosion, however they do cause bonus damage.  It's generaly 1/100ths of most armors max HP, 1/10th for daimler (70), and for M5 Stuart and T17 Staghound: 175HP damage per hit!"
 	},
 	"Panzer_III": {
 		"HP": 1200,
@@ -287,7 +286,7 @@
 			"75mm_AP": "240HP x2 (480)",
 			"88mm_AP": "350HP x2 (700)"
 		},
-		"notes": "Because of it's geometry, the 222 can take extra HP damage from one shot. (x3+ sometimes)"
+		"notes": "Because of it's geometry, the 222 can take extra HP damage from one shot. (x3+ sometimes).  20mm_AP types can not cause an instant 1 hit kill ammo box explosion, however they do cause bonus damage.  It's generaly 1/100ths of most armors max HP, 1/10th for daimler (70), and for M5 Stuart and T17 Staghound: 175HP damage per hit!"
 	},
 	"Sdkfz_232": {
 		"HP": 700,
@@ -313,7 +312,7 @@
 			"75mm_AP": "240HP x2 (480)",
 			"88mm_AP": "350HP x2 (700)"
 		},
-		"notes": ""
+		"notes": "20mm_AP types can not cause an instant 1 hit kill ammo box explosion, however they do cause bonus damage.  It's generaly 1/100ths of most armors max HP, 1/10th for daimler (70), and for M5 Stuart and T17 Staghound: 175HP damage per hit!"
 	},
 	"Sdkfz_234": {
 		"HP": 750,
