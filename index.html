@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml">
+	<!--[if IE]>
+		<div class="warning"><p>For the best experience please open using Chrome, Firefox or Safari</p></div>
+	<![endif]-->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Post Scriptum Armours</title>
@@ -168,6 +171,7 @@
 		<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     </head>
    <body>
+   <div class="unsupported-browser"></div>
    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
@@ -183,7 +187,7 @@
 			Please note that the models are (mostly) from the 4.16 version, but I don't believe anything has changed.<br>
 			Everything shown is a very close approximation, maybe when the SDK drops I can show more accurate info.<br>
 			If you run into any bugs, feel free to report them on <a href="https://github.com/dasu/PS_Armor_viewer">github</a>.<br>
-			If you see me in game, say hi! IGN: dasu<br>
+			If you see me in game, say hi! IGN: dasu | Reddit: lolicatgirls<br>
 			<a href="https://docs.google.com/spreadsheets/d/1XI5DwCRs92sU2nq2H42PncfRDnnjVk21pbkPTBIwQxE/edit#gid=0">Penetration curves source</a>
           </p>
         </main>
@@ -216,42 +220,54 @@
 	<select id="dd" autocomplete="off" style="position:absolute;">
 	  <optgroup label="Axis">
 		<option value="Jagdpanzer_IV">Jagdpanzer IV</option>
-		<option value="Panzer_38t">Panzer 38t (1940)</option>
-		<option value="Panzer_II">Panzer II (1940)</option>
-		<option value="Panzer_III">Panzer III</option>
-		<option value="Panzer_III_F">Panzer III F (1940?)</option>
+		<option value="Panzer_38t_new">Panzer 38t (1940)</option>
+		<option value="Panzer_II_new">Panzer II (1940)</option>
+		<option value="Panzer_III_new">Panzer III</option>
+		<option value="Panzer_III_F_new">Panzer III F (1940?)</option>
 		<option value="Panzer_IV">Panzer IV</option>
-		<option value="Panzer_IV_D">Panzer IV D (1940)</option>
-		<option value="Panzer_V">Panzer V Panther</option>
-		<option value="Panzer_VI_Tiger">Panzer VI Tiger</option>
-		<option value="Sdkfz_222">Sd. Kfz 222</option>
+		<option value="Panzer_IV_D_new">Panzer IV D (1940)</option>
+		<option value="Panzer_V_new">Panzer V Panther</option>
+		<option value="Panzer_VI_Tiger_new">Panzer VI Tiger</option>
+		<option value="Panzer_VI_Konigstiger">Panzer VI King Tiger</option>
+		<option value="Sdkfz_222_new">Sd. Kfz 222</option>
 		<option value="Sdkfz_232">Sd. Kfz 232</option>
 		<option value="Sdkfz_234">Sd. Kfz 234 Puma</option>
 		<option value="Stug_III">Stug III</option>
 	  </optgroup>
 	  <optgroup label="French (1940)">
-		<option value="Hotchkiss_H35">Hotchkiss H35</option>
+		<option value="Hotchkiss_H35_new">Hotchkiss H35</option>
 		<option value="Panhard_178">Panhard 178</option>
-		<option value="Renault_B1">Renault Char B1</option>
-		<option value="Renault_R35">Renault R35</option>
-		<option value="Somua_S35">Somua S35</option>
+		<option value="Renault_B1_new">Renault Char B1</option>
+		<option value="Renault_R35_new">Renault R35</option>
+		<option value="Somua_S35_new">Somua S35</option>
 	  </optgroup>
 	  <optgroup label="UK">
-		<option value="Churchill_Mk_IV">Churchill Mk IV</option>
-		<option value="Cromwell">Cromwell</option>
+		<option value="Churchill_Mk_IV_new">Churchill Mk IV</option>
+		<option value="Cromwell_new">Cromwell</option>
 		<option value="Daimler">Daimler</option>
 		<option value="Matilda">Matilda Mk II (1940)</option>
-		<option value="Sherman_Firefly" selected>Sherman Firefly</option>
+		<option value="Sherman_Firefly_new" selected>Sherman Firefly</option>
 		<option value="Staghound_T17">Staghound T17</option>
 	  </optgroup>
 	  <optgroup label="US">
 		<option value="M5_Stuart">M5 Stuart</option>
-		<option value="M18_Hellcat">M18 Hellcat (Unreleased?)</option>
+		<option value="M8_Greyhound">M8 Greyhound</option>
+		<option value="M10_Wolverine">M10 Wolverine</option>
+		<option value="M18_Hellcat_new">M18 Hellcat</option>
+		<option value="M24_Chaffee">M24 Chaffee</option>
 		<option value="Sherman_M4A3">Sherman M4A3</option>
 	  </optgroup>
 	</select>
     <canvas id="renderCanvas" touch-action="none"></canvas> //touch-action="none" for best results from PEP
     <script>
+		if(navigator.userAgent.indexOf('MSIE')!==-1
+		|| navigator.appVersion.indexOf('Trident/') > -1){
+		   d = document.getElementsByClassName('unsupported-browser');
+		   d[0].innerHTML = '<b>Unsupported Browser!</b> This website will offer limited functionality in this browser. We only support the recent versions of major browsers like Chrome, Firefox, Safari, and Edge.';
+		   d[0].style.display = 'block';
+		   window.stop();
+		}
+
 		var canvas = document.getElementById("renderCanvas"); // Get the canvas element 
 		var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 		var stackPanel = new BABYLON.GUI.StackPanel();
@@ -275,8 +291,8 @@
 			// Add lights to the scene
 			var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
 			// Add and manipulate meshes in the scene
-			var firstload = 'Sherman_Firefly';
-			var firstload = (new URL(window.location.href)).searchParams.get('armor') ? (new URL(window.location.href)).searchParams.get('armor'): 'Sherman_Firefly'
+			var firstload = 'Sherman_Firefly_new';
+			var firstload = (new URL(window.location.href)).searchParams.get('armor') ? (new URL(window.location.href)).searchParams.get('armor'): 'Sherman_Firefly_new'
 			document.getElementById('dd').value = firstload;			
 			BABYLON.SceneLoader.ImportMesh("", "./new/", firstload+".glb", scene, function(meshes) {
 				//scene.createDefaultCameraOrLight(true, true, true);
@@ -305,6 +321,7 @@
 				
 				extrainfocheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Extra Info", function(value){
 					if(value){
+						firstload = firstload.replace("_new","");
 						table = buildExtraInfo(firstload);
 						var md2 = document.getElementById('modal-2-content');
 						md2.appendChild(table);
@@ -323,6 +340,7 @@
 				
 				pencheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Penetration Curves", function(value){
 					if(value){
+						firstload = firstload.replace("_new","");
 						pen = new BABYLON.GUI.Image("pen", "./pen/"+firstload+".png");
 						pen.autoScale = 1;
 						pen.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
@@ -552,6 +570,7 @@
 				
 				pencheckbox = BABYLON.GUI.Checkbox.AddCheckBoxWithHeader("Penetration Curves", function(value){
 					if(value){
+						file = file.replace("_new","");
 						pen = new BABYLON.GUI.Image("pen", "./pen/"+file+".png");
 						pen.autoScale = 1;
 						pen.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
@@ -711,6 +730,7 @@
 		});
 		
 		function buildExtraInfo(cur){
+			cur = cur.replace("_new","")
 			var a = armors[cur]
 			if(cur == 'M18_Hellcat'){
 				p = document.createElement("p")
